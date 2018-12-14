@@ -161,7 +161,7 @@ with g_principal_net.as_default():
         tf.nn.relu, tf.nn.relu, None], g_principal_net)
 
    
-    ##### Create the placeholders needed for computing the belmman operator for Q(s, a) = r(s, a) + max a Q(s', a)
+    ##### Create the placeholders needed for computing the bellman operator for Q(s, a) = r(s, a) + max a Q(s', a)
     s_prime_max_a_value_function = tf.placeholder(
         dtype=tf.float32, shape=None, name="s_a_value")
     
@@ -181,7 +181,7 @@ with g_principal_net.as_default():
 with tf.Session(graph=g_principal_net) as sess:
 
     sess.run(init)
-    #### colect the parameters of the learning neuralnetwork to be passed onto the target network
+    #### collect the parameters of the learning neural network to be passed later onto the target network
     target_network_weights = sess.run(weights)
     target_network_biases = sess.run(biases)
 
@@ -195,8 +195,8 @@ with tf.Session(graph=g_principal_net) as sess:
     costs = []
 
     ####Main DQN loop
-    #### You can interrupt the main loop with ctrl c the expception will be handled and you can see the behaviour of you 
-    #### policy if you think the network is already performing well
+    #### You can interrupt the main loop with ctrl c, the expception will be handled and you can see the behaviour of your
+    #### policy, if you think the network is already performing well.
     try:
         for num_iterations in range(10000):
 
