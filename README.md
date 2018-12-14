@@ -13,6 +13,9 @@ ___
 
 [DQN]: https://github.com/TomeASilva/CartPole-Open-AI-enviroment-DQ-learning/blob/master/images/Q_learnig.png
 
+Image taken from: CS 294-112 at UC Berkeley lecture slides\
+See more at: http://rail.eecs.berkeley.edu/deeprlcourse/
+
  
  
   
